@@ -63,7 +63,7 @@ Deci ya da kg ölçülememesi durumunda 0(sıfır) olarak gönderilmelidir.
 
 $ProductCode='';//string,Zorunlu değil.Boş string olarak gönderilmelidir.
 $Description='';//string,Zorunlu değil.Ürüne ilişkin açıklama bilgisidir.Boş string olarak gönderilmelidir.
-$DeliveryData['products'][]		=['Count'=>$Count,'Deci'=>$Deci,'ProductCode'=>$ProductCode,'Description'=>$Description];		//string,Zorunlu değil.referenceNo alanının müşteri iş işleyişinde referans bazlı gönderi ayırmaya yeterli olmadığı durumlar için müşterinin daha fazla detay girebilmesini sağlayan alandır.
+$DeliveryData['products'][]		=['Count'=>$Count,'Deci'=>$Deci,'ProductCode'=>$ProductCode,'Description'=>$Description];
 
 
 $result= json_decode($sendeo->SetDelivery($DeliveryData),true);
