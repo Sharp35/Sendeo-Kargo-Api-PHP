@@ -73,11 +73,11 @@ class Sendeo
  
     } 
 	
-	public function SetDelivery($data) {
+    public function SetDelivery($data) {
 		
-		$token =$this->getToken();
+	$token =$this->getToken();
         $ch = curl_init();
-		$url='https://api.sendeo.com.tr/api/Cargo/SETDELIVERY';
+	$url='https://api.sendeo.com.tr/api/Cargo/SETDELIVERY';
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_POST, 1);
@@ -90,16 +90,12 @@ class Sendeo
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
         $response = curl_exec($ch);
-
-
-		
-		return $response;
-		
-
-		curl_close($ch);
+	
+	return $response;
+	curl_close($ch);
  
     }
-	public function CancelDelivery($data) {
+    public function CancelDelivery($data) {
 		
 		$token =$this->getToken();
 		$ch = curl_init();
@@ -116,61 +112,52 @@ class Sendeo
 		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
 		$result = curl_exec($ch);
-
-
-		
+	    
 		return $result;
-		
-
+	    
 		curl_close($ch);
  
     }
 	
-	public function TrackDelivery($data) {
+    public function TrackDelivery($data) {
 	
-		$token =$this->getToken();
-		$ch = curl_init();
-		$url='https://api.sendeo.com.tr/api/Cargo/TRACKDELIVERY?'.http_build_query($data);
-		curl_setopt($ch, CURLOPT_URL, $url);
+	$token =$this->getToken();
+	$ch = curl_init();
+	$url='https://api.sendeo.com.tr/api/Cargo/TRACKDELIVERY?'.http_build_query($data);
+	curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
         $headers = array();
-		$headers[] = 'Authorization:Bearer '.$token['token'];
-		$headers[] = 'Accept: application/json';
+	$headers[] = 'Authorization:Bearer '.$token['token'];
+	$headers[] = 'Accept: application/json';
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
         $response = curl_exec($ch);
-
-
-		
-		return $response;
-		
-
-		curl_close($ch);
 	
-	}
-	public function GetCityDistricts($data) {
+	return $response;
+		
+       	curl_close($ch);
 	
-		$token =$this->getToken();
-		$ch = curl_init();
-		$url='https://api.sendeo.com.tr/api/Cargo/GetCityDistricts?'.http_build_query($data);
+    }
+    public function GetCityDistricts($data) {
+	
+	$token =$this->getToken();
+	$ch = curl_init();
+	$url='https://api.sendeo.com.tr/api/Cargo/GetCityDistricts?'.http_build_query($data);
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
         $headers = array();
-		$headers[] = 'Authorization:Bearer '.$token['token'];
-		$headers[] = 'Accept: application/json';
+	$headers[] = 'Authorization:Bearer '.$token['token'];
+	$headers[] = 'Accept: application/json';
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
         $response = curl_exec($ch);
-
-
-		
-		return $response;
-		
-
-		curl_close($ch);
 	
-	}
+	return $response;
+	
+	    curl_close($ch);
+	
+    }
 
 }
