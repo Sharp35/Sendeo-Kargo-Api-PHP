@@ -3,8 +3,8 @@
 class Sendeo
 {
 
-	public $musteri	='çizgimedikal';
-	public $sifre	='4XWdZcJ34LnV66B!';
+	public $musteri	='musteriadiniz';
+	public $sifre	='sifreniz';
 	public $token;
 
 	public function getToken() { 
