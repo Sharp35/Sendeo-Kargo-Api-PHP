@@ -1,8 +1,9 @@
 <?php
 require_once 'class.php';
-$musteri='musterinumaraniz';
-$sifre='sifreniz';
-$sendeo = new Sendeo($musteri,$sifre);
+
+$sendeo = new Sendeo();
+$token = $sendeo->getToken();
+$sendeo->token=$token;
 
 /*
 •	DeliveryType 1: Lokasyonunuz >> Müşteriniz: Lokasyon’dan Müşteriye giden gönderilerde kullanılmaktadır. Birden fazla lokasyon var ve her biri için ayrı fatura düzenlenecek ise; farklı kullanıcılar ile yönetilmelidir. Eğer fatura Ana Müşteriye düzenlenecek ise deliveryType=3 kullanılmalıdır.
