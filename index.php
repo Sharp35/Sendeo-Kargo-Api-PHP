@@ -16,21 +16,21 @@ $sendeo->token=$token;
 */				
 
 $DeliveryData=[];
-$DeliveryData['DeliveryType']		=1;			//integer,Zorunlu;
-$DeliveryData['ReferenceNo']		=1234;	//string,Zorunlu.Müşterilerin iç işleyişinde kullandığı referans numarasını içerir. Bu değer ile gönderiler takip edebilir, iade talepleri oluşturabilir.
-$DeliveryData['Description']		='';		//string,Zorunlu değil.Gönderiye ait özel bir bilgi veya açıklama girmek isterseniz bu alanı kullanabilirsiniz.
-$DeliveryData['Sender']				='.....Tic. A.Ş.';//string,Değişken.Gönderen müşteri ünvanını içerir. DeliveryType = 2,3 için zorunludur.DeliveryType = 1 için doldurulmaz.
-$DeliveryData['SenderId']			='';//string,Zorunlu değil.Sendeo tarafında olan müşteri kodu bilgisidir. Sendeo tarafında kayıtlı müşteriler kullanılmıyor ise ilgili alan gönderilmemesi gerekmektedir.
+$DeliveryData['DeliveryType']		  =1;			//integer,Zorunlu;
+$DeliveryData['ReferenceNo']		  =1234;	//string,Zorunlu.Müşterilerin iç işleyişinde kullandığı referans numarasını içerir. Bu değer ile gönderiler takip edebilir, iade talepleri oluşturabilir.
+$DeliveryData['Description']		  ='';		//string,Zorunlu değil.Gönderiye ait özel bir bilgi veya açıklama girmek isterseniz bu alanı kullanabilirsiniz.
+$DeliveryData['Sender']				    ='.....Tic. A.Ş.';//string,Değişken.Gönderen müşteri ünvanını içerir. DeliveryType = 2,3 için zorunludur.DeliveryType = 1 için doldurulmaz.
+$DeliveryData['SenderId']			    ='';//string,Zorunlu değil.Sendeo tarafında olan müşteri kodu bilgisidir. Sendeo tarafında kayıtlı müşteriler kullanılmıyor ise ilgili alan gönderilmemesi gerekmektedir.
 $DeliveryData['SenderAuthority']	='';		//string,Zorunlu değil.Gönderen müşteri yetkilinizi belirtir.
 $DeliveryData['SenderBranchCode']	='';		//integer,Değişken.İade noktası operasyonunda gönderilmesi zorunlu alandır. DeliveryType = 6 seçilmemesi durumunda boş bırakılmalıdır..
 $DeliveryData['SenderAddress']		='İZMİR';//string,Zorunlu;
-$DeliveryData['SenderCityId']		=35;		//integer,Zorunlu.City tablosundan gelecek şehir Id’si ile gönderen müşteri ili olarak girilmelidir.
+$DeliveryData['SenderCityId']		  =35;		//integer,Zorunlu.City tablosundan gelecek şehir Id’si ile gönderen müşteri ili olarak girilmelidir.
 $DeliveryData['SenderDistrictId']	=3746607;		//integer,Zorunlu.District tablosundan gelecek Id gönderen müşterinin bulunduğu ilçe girilmelidir.;
-$DeliveryData['senderPhone']		='2321111111';//string,Değişken.Gönderen müşterinin telefon numarasını belirtir. İdealde xyz1234567 şeklinde 10 hane olarak gönderilmesi beklenmektedir.Phone veya GSM alanlarından bir tanesi mutlaka gönderilmelidir.
-$DeliveryData['SenderGSM']			='5321111111';//string,Değişken.Gönderen müşterinin GSM numarasını belirtir. İdealde 5xx1234567 şeklinde 10 hane olarak gönderilmesi beklenmektedir.Phone veya GSM alanlarından bir tanesi mutlaka gönderilmelidir.
-$DeliveryData['SenderEmail']		='';			//string,Zorunlu değil.Gönderen müşterinin mail adresini içerir.
+$DeliveryData['senderPhone']		  ='2321111111';//string,Değişken.Gönderen müşterinin telefon numarasını belirtir. İdealde xyz1234567 şeklinde 10 hane olarak gönderilmesi beklenmektedir.Phone veya GSM alanlarından bir tanesi mutlaka gönderilmelidir.
+$DeliveryData['SenderGSM']			  ='5321111111';//string,Değişken.Gönderen müşterinin GSM numarasını belirtir. İdealde 5xx1234567 şeklinde 10 hane olarak gönderilmesi beklenmektedir.Phone veya GSM alanlarından bir tanesi mutlaka gönderilmelidir.
+$DeliveryData['SenderEmail']		  ='';			//string,Zorunlu değil.Gönderen müşterinin mail adresini içerir.
 
-$DeliveryData['Receiver']			='Alıcı İsim Soyisim';	//string,Değişken.deliveryType = 1,3 için zorunludur.deliveryType = 2 için doldurulmaz.
+$DeliveryData['Receiver']			  ='Alıcı İsim Soyisim';	//string,Değişken.deliveryType = 1,3 için zorunludur.deliveryType = 2 için doldurulmaz.
 $DeliveryData['ReceiverId']			='';		//string,Değişken.Alıcı müşterinin kodudur. Sendeo tarafında değeri biliniyor ise gönderilmelidir.
 $DeliveryData['ReceiverAuthority']	='';		//string,Zorunlu değil.Alıcı müşteri yetkilisini belirtir.
 $DeliveryData['ReceiverBranchCode']	='';		//integer,Değişken.Teslimat noktası operasyonunda gönderilmesi zorunlu alandır. deliveryType = 5 seçilmemesi durumunda boş bırakılmalıdır..
